@@ -11,6 +11,8 @@ CAT2_COLUMN = 'cat2'
 CAT3_COLUMN = 'cat3'
 PERCENTAGE_COLUMN = 'percentage'
 
+FILE = 'https://update.wholemeaning.com/model/cchc.csv'
+
 # Ayudas
 REGION_FILTER_HELP = "ayuda 1"
 COMUNA_FILTER_HELP = "ayuda 2"
@@ -40,15 +42,15 @@ METODOLOGIA_MD = """| Etapa                   | Descripción                    
 | Diseño de investigación | Estudio cualitativo y cuantitativo sobre la base del recogimiento de información de las opiniones de usuarios registradas en redes sociales (Facebook) con cobertura a nivel nacional.                                                                                 |
 | Población en estudio    | Población general, mujeres y hombres con cuentas en redes sociales, pertenecientes a todos los grupos etarios y socioeconómicos. Considera una cobertura de prácticamente todo el territorio nacional (salvo algunas comunas pequeñas que no cuentan con información). |
 | Instrumento de medición | Software de inteligencia artificial con capacidad de leer el total de los comentarios.                                                                                                                                                                                 |
-| Fecha de medición       | El estudio considera los comentarios emitidos a partir del 1 de Enero de 2021 hasta el 31 de Mayo de 2021   """
+| Fecha de medición       | El estudio considera los comentarios emitidos a partir del 1 de Enero de 2021 hasta el 30 de Junio de 2021   """
 ANTECEDENTES_MD = """| Antecedente                                                | Descripción                                                                                                                                                                                                                                                                                                                                                       |
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Redes Sociales Utilizadas                                  | Cuenta de Facebook Oficial Comunas de Chile                                                                                                                                                                                                                                                                                                                       |
 | Cuentas Monitoreadas                                       | 332 cuentas en 16 Regiones                                                                                                                                                                                                                                                                                                                                        |
-| Periodo de Análisis                                        | 1 de Enero a 31 de Mayo de 2021                                                                                                                                                                                                                                                                                                                                   |
-| Tamaño de la Muestra Total                                 | 1.966.339 Personas                                                                                                                                                                                                                                                                                                                                                |
-| Tamaño de Muestra Relacionado a Temas Relevantes Comunales | 858.545 Personas                                                                                                                                                                                                                                                                                                                                                  |
-| Metodología                                                | El software leyó comentarios emitidos por el total de la muestra y levantó 1.833 temas de forma automatizada. Entre esos temas el 43 son relevantes, de interés y potencialmente accionables. El software es capaz de interpretar las necesidades de las personas respecto de temas específicos en los que se pueda generar una acción para ayudar a la comunidad |"""
+| Periodo de Análisis                                        | 1 de Enero a 30 de Junio de 2021                                                                                                                                                                                                                                                                                                                                   |
+| Tamaño de la Muestra Total                                 | 2.404.167 Personas                                                                                                                                                                                                                                                                                                                                                |
+| Tamaño de Muestra Relacionado a Temas Relevantes Comunales | 1.033.733 Personas                                                                                                                                                                                                                                                                                                                                                  |
+| Metodología                                                | El software leyó comentarios emitidos por el total de la muestra y levantó 1.839 temas de forma automatizada. Entre esos temas el 43 son relevantes, de interés y potencialmente accionables. El software es capaz de interpretar las necesidades de las personas respecto de temas específicos en los que se pueda generar una acción para ayudar a la comunidad |"""
 
 # Opciones Visuales
 FONT_SIZE = 14
@@ -68,7 +70,7 @@ def get_logo():
 
 @st.cache
 def load_data():
-    data = pd.read_csv('https://update.wholemeaning.com/model/cchc.csv', sep=',')
+    data = pd.read_csv(FILE, sep=',')
     lowercase = lambda x: str(x).lower()
     data.rename(lowercase, axis='columns', inplace=True)
     return data
