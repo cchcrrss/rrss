@@ -12,6 +12,7 @@ CAT3_COLUMN = 'cat3'
 PERCENTAGE_COLUMN = 'percentage'
 
 FILE = 'https://update.wholemeaning.com/model/cchc.csv'
+# FILE = 'cchc.csv'
 
 # Ayudas
 REGION_FILTER_HELP = "ayuda 1"
@@ -136,7 +137,7 @@ comunas.sort()
 comuna = col1.multiselect(label="Filtrar por Comuna",options=comunas)
 
 data_filtrada = data
-data_filtrada = data_filtrada[data_filtrada[SENDER_COLUMN]==False]
+# data_filtrada = data_filtrada[data_filtrada[SENDER_COLUMN]==False]
 data_filtrada = data_filtrada[data_filtrada[CAT2_COLUMN].notnull()]
 data_filtrada = data_filtrada[data_filtrada[CAT2_COLUMN] != 'Otros']
 
