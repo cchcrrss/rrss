@@ -146,7 +146,7 @@ if comuna:
     data_filtrada = data_filtrada[data_filtrada[COMUNA_COLUMN].isin(comuna)]
 
 
-data_temas = data_filtrada.groupby(CAT2_COLUMN)[MSG_ID_COLUMN].nunique().to_frame().reset_index(level='cat2')
+data_temas = data_filtrada.groupby(CAT2_COLUMN)[MSG_ID_COLUMN].count().to_frame().reset_index(level='cat2')
 
 temas = data[data[CAT2_COLUMN].notnull()][CAT2_COLUMN].unique().tolist()
 temas.sort()
@@ -166,7 +166,7 @@ tema = st.multiselect(label="Filtrar por Tema",options=temas)
 data_subtemas = data_filtrada
 if tema:
     data_subtemas = data_subtemas[data_subtemas[CAT2_COLUMN].isin(tema)]
-data_q_subtemas = data_subtemas.groupby([CAT2_COLUMN,CAT3_COLUMN])[MSG_ID_COLUMN].nunique().to_frame().reset_index(level=['cat3','cat2'])
+data_q_subtemas = data_subtemas.groupby([CAT2_COLUMN,CAT3_COLUMN])[MSG_ID_COLUMN].count().to_frame().reset_index(level=['cat3','cat2'])
 data_p_subtemas = data_subtemas.groupby([CAT2_COLUMN,CAT3_COLUMN])[PERCENTAGE_COLUMN].sum().to_frame().reset_index(level=['cat3','cat2'])
 data_p_subtemas[PERCENTAGE_COLUMN] = data_p_subtemas[PERCENTAGE_COLUMN]/(data_p_subtemas[PERCENTAGE_COLUMN].sum())
 
