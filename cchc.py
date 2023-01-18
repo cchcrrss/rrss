@@ -102,9 +102,9 @@ def generar_grafico(data,campoX,campoY,color,altura,formato):
 # Header y ayuda
 st.image(get_logo())
 st.title('Análsis de Contingencia de la Camara Chilena de la Construcción')
-help_container = st.beta_container()
+help_container = st.container()
 start_button_container = st.empty()
-help_container_2 = st.beta_container()
+help_container_2 = st.container()
 start_button = start_button_container.checkbox("Empezar Análisis")
 if not start_button:
     help_container.write(HELP_TEXT_1)
