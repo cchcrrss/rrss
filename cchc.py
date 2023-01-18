@@ -108,7 +108,7 @@ help_container_2 = st.container()
 start_button = start_button_container.checkbox("Empezar Análisis")
 if not start_button:
     help_container.write(HELP_TEXT_1)
-    help_col_1,help_col_2 = help_container_2.beta_columns(2)
+    help_col_1,help_col_2 = help_container_2.columns(2)
     help_col_1.subheader("Guía Rapida")
     help_col_1.write(HELP_TEXT_2)
     help_col_2.subheader("Antecedentes del Estudio")
@@ -121,7 +121,7 @@ if not start_button:
     st.stop()
 
 # Columnas de filtros y grafico inicial
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 
 col1.subheader("Filtros de Región / Comuna")
 col1.write("Al seleccionar de estos filtros aparecerá información detallada de la zona")
@@ -177,7 +177,7 @@ p_subtemas_chart = generar_grafico(data_p_subtemas,'cat3','percentage','cat2',0,
 
 
 # Charts
-col3, col4 = st.beta_columns(2)
+col3, col4 = st.columns(2)
 with col3:
     st.subheader("Indice de Relevancia por Subtema (% Relativo a la Media Nacional)")
     st.altair_chart(p_subtemas_chart,True)
