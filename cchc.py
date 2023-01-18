@@ -100,7 +100,7 @@ def generar_grafico(data,campoX,campoY,color,altura,formato):
     return chart
 
 # Header y ayuda
-st.image(get_logo())
+st.image('https://cchc.cl/assets2020/main-site/img/brand.svg',width=162)
 st.title('Análsis de Contingencia de la Camara Chilena de la Construcción')
 help_container = st.container()
 start_button_container = st.empty()
