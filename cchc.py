@@ -11,7 +11,8 @@ CAT2_COLUMN = 'cat2'
 CAT3_COLUMN = 'cat3'
 PERCENTAGE_COLUMN = 'percentage'
 
-FILE = 'https://update.wholemeaning.com/model/cchc.csv'
+# FILE = 'https://update.wholemeaning.com/model/cchc.csv'
+FILE = 'https://update.wholemeaning.com/model/out_new_final_1.csv'
 # FILE = 'cchc.csv'
 
 # Ayudas
