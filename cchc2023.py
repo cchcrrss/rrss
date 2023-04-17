@@ -11,7 +11,7 @@ CAT2_COLUMN = 'cat2'
 CAT3_COLUMN = 'cat3'
 PERCENTAGE_COLUMN = 'percentage'
 
-FILE = 'https://update.wholemeaning.com/model/cchc.csv'
+FILE = 'https://update.wholemeaning.com/model/out_new_final_1.csv'
 
 # Ayudas
 REGION_FILTER_HELP = "ayuda 1"
@@ -47,9 +47,7 @@ ANTECEDENTES_MD = """| Antecedente                                              
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Redes Sociales Utilizadas                                  | Cuenta de Facebook Oficial Comunas de Chile                                                                                                                                                                                                                                                                                                                       |
 | Cuentas Monitoreadas                                       | 332 cuentas en 16 Regiones                                                                                                                                                                                                                                                                                                                                        |
-| Periodo de Análisis                                        | 1 de Enero a 30 de Junio de 2021                                                                                                                                                                                                                                                                                                                                   |
-| Tamaño de la Muestra Total                                 | 2.404.167 Personas                                                                                                                                                                                                                                                                                                                                                |
-| Tamaño de Muestra Relacionado a Temas Relevantes Comunales | 1.033.733 Personas                                                                                                                                                                                                                                                                                                                                                  |
+| Periodo de Análisis                                        | 1 de Enero a 16 de Abril de 2023                                                                                                                                                                                                                                                                                                                                  |
 | Metodología                                                | El software leyó comentarios emitidos por el total de la muestra y levantó 1.839 temas de forma automatizada. Entre esos temas el 43 son relevantes, de interés y potencialmente accionables. El software es capaz de interpretar las necesidades de las personas respecto de temas específicos en los que se pueda generar una acción para ayudar a la comunidad |"""
 
 # Opciones Visuales
