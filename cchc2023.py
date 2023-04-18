@@ -123,6 +123,7 @@ col1, col2 = st.columns(2)
 col1.subheader("Filtros de Región / Comuna")
 col1.write("Al seleccionar de estos filtros aparecerá información detallada de la zona")
 data = load_data()
+data = data[data[REGION_COLUMN] == 'Metropolitana de Santiago']
 regiones = data[REGION_COLUMN].unique().tolist()
 regiones.sort()
 region = col1.multiselect(label="Filtrar por Región",options=regiones)
